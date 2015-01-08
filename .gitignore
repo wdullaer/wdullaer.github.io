@@ -1,0 +1,7 @@
+# Don't store the generated files
+_site
+
+# Standard temp files
+.directory
+.DS_Store
+
