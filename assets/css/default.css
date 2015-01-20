@@ -267,7 +267,7 @@ abbr[title] {
 
 blockquote, pre, .message {
 	padding: 10px 18px;
-	margin: 0px 0px 30px -20px;
+	margin: 0px 0px 30px 0px;
 	margin-top: inherit;
 	color: #7a7a7a;
 }
@@ -404,7 +404,7 @@ pre code {
 	-moz-osx-font-smoothing: antialiased;
 	 -webkit-font-smoothing: antialiased;
 	         font-smoothing: antialiased;
-	
+
 	letter-spacing: 1.2pt;
 	font-size: 12px;
 	font-weight: 600;
