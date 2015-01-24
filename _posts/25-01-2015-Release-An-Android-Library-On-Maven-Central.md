@@ -5,6 +5,9 @@ quote: "A lot more hassle than it should be: now explained"
 image: false
 video: false
 comments: true
+categories:
+- Android
+- Tutorial
 ---
 I was going to put "the easy way", but well the reality is that there is no easy way.
 Hopefully this post can make the entire experience a bit less painful for you.
@@ -16,7 +19,7 @@ You will need the following ingredients
 3. [A gpg key](#create-a-gpg-key)
 4. [A gradle build script](#get-the-gradle-build-script)
 5. [Lot's of gradle configuration](#configure-gradle)
-6. [Perform the release steps on sonatype](#promote-the-staged-release)
+6. [Perform the release steps on sonatype](#release-the-staged-artifact)
 
 
 I'm going to assume that you have a library in a releasable state and go straight to step 2
@@ -138,5 +141,23 @@ Strictly speaking you could add all the variables to the lowest level, but if we
 we might as well do it properly.
 
 
-## Promote the staged release
-<http://central.sonatype.org/pages/releasing-the-deployment.html>
+## Release the staged artifact
+Once you have uploaded your artifact to Maven Central using the build script you need to release it.
+
+1. Go to <http://oss.sonatype.org> and login with the account you created in step 1.
+
+2. Initially your artifact is located in a so called "staging" repository. It's name is your groupId with a dash and some numbers.  
+Like all proper enterprise software there is a whole bunch of other options and data shown here, that are totally irrelevant, which you should under no condition touch.
+
+3. Once you've located your staging repository you can press the close button. This won't actually close the repository but triggers a process that checks whether the contents of the repository meets sonatype's guidelines.  
+After a few seconds this process should be finished and you can hit the refresh button.
+
+4. If your repository passes the tests. It will be marked closed and you should be able to click the release button. This will terminate the process and make your library publicly available.
+
+Your users can now access your library by putting the following line in their `build.gradle` dependencies:
+
+```javascript
+compile 'com.wdullaer:materialdatetimepicker:1.0.0'
+```
+
+More information on this last step can be found here: <http://central.sonatype.org/pages/releasing-the-deployment.html>

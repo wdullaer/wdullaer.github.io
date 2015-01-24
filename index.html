@@ -15,7 +15,7 @@ title: Home
 		<div>
 			<span class="post-date">{{ post.date | date_to_long_string }}</span>
 			<h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-			<p class="post-description">{{ post.content | strip_html | truncatewords: 50 }}</p>
+			<p class="post-description">{{ post.excerpt | strip_html }}</p>
 		</div>
 		<br>
 	{% endfor %}
