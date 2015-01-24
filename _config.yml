@@ -1,7 +1,12 @@
 # Dependencies
-markdown:    kramdown
+markdown:    redcarpet
+
 # Permalinks
 permalink:   /blog/:year/:month/:day/:title
+
+# Markdown processor
+redcarpet:
+  extensions: [with_toc_data]
 
 # Setup
 baseurl:
@@ -10,18 +15,18 @@ title:       Wouter Dullaert
 tagline:     'interesting stuff'
 description: 'Another scratchpad on the internet'
 url:         http://wdullaer.github.io
-commentsystem: google
-disqus:      example
+commentsystem: disqus
+disqus:      wdullaer
 
 author:
   name:      'Wouter Dullaert'
-  url:       https://google.com/+WouterDullaert
+  url:       https://twitter.com/wouterdullaert
 
 paginate:	   5
 
 # Custom vars
 icon:        /assets/images/icon.png
-cover:       /assets/images/cover.jpg
+cover:       /assets/images/cover_2.png
 
 social:
   - icon: twitter

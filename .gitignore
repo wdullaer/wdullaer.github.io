@@ -4,4 +4,5 @@ _site
 # Standard temp files
 .directory
 .DS_Store
+*~
 
