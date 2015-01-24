@@ -6,9 +6,6 @@ image: false
 video: false
 comments: true
 ---
-# How to release an Android Library on Maven Central
-
-## Introduction
 I was going to put "the easy way", but well the reality is that there is no easy way.
 Hopefully this post can make the entire experience a bit less painful for you.
 
@@ -26,7 +23,13 @@ I'm going to assume that you have a library in a releasable state and go straigh
 
 
 ## Create a sonatype account
-<https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&pid=10134>
+The first thing you need to do is create an account on <https://issues.sonatype.org>. This involves the standard fare of picking a username and a password.
+Once that is done, you can [create an issue](https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&pid=10134) to provision your account and obtain a groupId.
+
+On any other website you would be done now, but sonatype verifies your account manually and this takes some time. Don't expect to release your library the day you create your account.
+
+Make sure you read and follow the guidlines for the groupId, they are strictly enforced. If it is a reversed fully qualified domain name of a domain you own (eg: com.wdullaer for me) or where they
+can reasonably expect your project to live under your control (eg: com.github.wdullaer), you should be fine.
 
 ## Create a gpg key
 On Linux the gpg or gpg2 binaries should be installed by default. If not use your systems package manager to get them.
@@ -71,8 +74,11 @@ More information can be found here: <http://central.sonatype.org/pages/working-w
 
 
 ## Get the gradle build script
-This is in fact the easiest step. Someone went through the trouble of creating a proper Maven
+This is in fact the easiest step. Maven Central puts a lot of quality requirements on the artifacts you can upload: pom.xml files, javadocs, etc.
+
+However, someone already went through the trouble of creating a proper Maven
 release build script at <https://raw.githubusercontent.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle>
+This script takes care of preparing your artifact in a Maven Central compatible fashion and uploads it to your staging repository.
 
 You can include this one directly into the root of your `build.gradle` of your library.
 
@@ -83,7 +89,7 @@ apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn
 Or if you're the paranoid sort: you can add a hardcopy to your project and reference that.
 
 ## Configure gradle
-You will need to create a total of 3 `gradle.properties` files:
+You will need to create a total of 3 `gradle.properties` files to configure the build script you added in the previous step:
 
 * 1 at the module level (`/MyAwesomeLibrary/library/gradle.properties`)
 
