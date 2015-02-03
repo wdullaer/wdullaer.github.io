@@ -14,7 +14,7 @@ baseurl:
 title:       Wouter Dullaert
 tagline:     'interesting stuff'
 description: 'Another scratchpad on the internet'
-url:         http://wdullaer.github.io
+url:         http://blog.wdullaer.com
 commentsystem: disqus
 disqus:      wdullaer
 
@@ -42,7 +42,7 @@ social:
     desc: Add me on google+
 
   - icon: feed
-    url:  http://wdullaer.github.io/atom.xml
+    url:  http://blog.wdullaer.com/atom.xml
     desc: Subscribe to my feed
 
 menu:
@@ -54,7 +54,7 @@ menu:
 
 copyright:
   author:     Wouter Dullaert
-  url:        http://wdullaer.github.io
+  url:        http://blog.wdullaer.com
   type_title: Some rights reserved
   type_url:   http://creativecommons.org/licenses/by-nc/2.5
 

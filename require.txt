@@ -1,0 +1,16 @@
+'require "jekyll-import";
+    JekyllImport::Importers::WordPress.run({
+      "dbname"   => "zniclomq_wp1",
+      "user"     => "zniclomq_wp1",
+      "password" => "C!in6tl!0k&@5",
+      "host"     => "http://159.253.0.33",
+      "socket"   => "",
+      "table_prefix"   => "wp_",
+      "clean_entities" => true,
+      "comments"       => true,
+      "categories"     => true,
+      "tags"           => true,
+      "more_excerpt"   => true,
+      "more_anchor"    => true,
+      "status"         => ["publish"]
+    })'
