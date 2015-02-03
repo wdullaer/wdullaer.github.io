@@ -8,6 +8,10 @@ permalink:   /blog/:year/:month/:day/:title
 redcarpet:
   extensions: [with_toc_data]
 
+# Github pages extensions
+gems:
+  - jekyll-sitemap
+
 # Setup
 baseurl:
 
