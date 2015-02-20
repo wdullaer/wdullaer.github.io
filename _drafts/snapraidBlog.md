@@ -1,4 +1,33 @@
-sudo apt-get install idle3-tools
+---
+layout: post
+title: "Create a NAS with redundancy using Snapraid"
+quote: "Because sometimes RAID and ZFS are overkill"
+image: /media/06-02-2015-Grim-Fandango-With-Linux-Radeon-Drivers/cover.png
+video: false
+comments: true
+categories:
+- Linux
+- Tutorial
+tags:
+- Linux
+- Snapraid
+- AUFS
+- NAS
+- JBOD
+---
+
+## Why snapraid
+
+### RAID features and drawbacks
+
+### ZFS features and drawbacks
+
+### AUFS features and drawbacks
+
+## AUFS Configuration
+
+## Snapraid Configuration
+
 
 mount
 /dev/sdc1 on / type ext4 (rw,noatime,errors=remount-ro)
@@ -28,7 +57,7 @@ nfsd on /proc/fs/nfsd type nfsd (rw)
 
 Add anacron and postfix folders to rc.local when using tmpfs: /var/spool/anacron /var/spool/postfix
 
-Hack your WD green: http://forums.freenas.org/index.php?threads/hacking-wd-greens-and-reds-with-wdidle3-exe.18171/
+
 
 Sync script: http://zackreed.me/articles/83-updated-snapraid-sync-script
 
