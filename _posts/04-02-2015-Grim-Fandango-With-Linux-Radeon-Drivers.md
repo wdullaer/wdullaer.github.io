@@ -35,4 +35,4 @@ mv $GRIM_FANDANGO_ROOT/game/bin/i386/usr/lib/i386-linux-gnu/libstdc++.so.6 $GRIM
 ```
 This will force the game to use the local installed version which has no issues loading the OpenGL libraries.
 
-I'm not exactly sure why this works, but at least I get to enjoy one of childhood favourite games.
+I'm not exactly sure why this works, but at least I get to enjoy one of my childhood favourite games.
