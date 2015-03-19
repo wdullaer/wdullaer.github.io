@@ -15,8 +15,8 @@ gems:
 # Setup
 baseurl:
 
-title:       Wouter Dullaert
-tagline:     'interesting stuff'
+title:       'Wouter Dullaert'
+tagline:     'Interesting Stuff'
 description: 'Another scratchpad on the internet'
 url:         http://blog.wdullaer.com
 commentsystem: disqus
