@@ -6,6 +6,11 @@
   border-radius: 3px;
   color: #FFFFFF;
 }
+
+.gist pre {
+  color: #515151;
+}
+
 /* Highlights taken from https://gist.github.com/asaaki/1007420  for Monokai theme */
 .c                 { color: #75715e }                            /* Comment                     */
 .err               { color: #960050; background-color: #1e0010 } /* Error                       */

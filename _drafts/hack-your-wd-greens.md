@@ -2,7 +2,7 @@
 layout: post
 title: "Hack your WD Greens"
 quote: "A small firmware tweak will turn them into Reds"
-image: /media/06-02-2015-Grim-Fandango-With-Linux-Radeon-Drivers/cover.png
+image: /media/2015-04-07-Hack-WD-Greens/cover.jpg
 video: false
 excerpt: "WD Green and Red disks are physically identical, with only a firmware setting distinguishing them. The default settings on a WD Green will cause them to die prematurely when used in a file server environment. Fortunately you can change this setting very easily. Here's how."
 comments: true
