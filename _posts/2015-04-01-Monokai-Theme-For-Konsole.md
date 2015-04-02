@@ -23,7 +23,9 @@ Because I find it quite pleasing to look at for long periods of time, I decided 
 {% gist wdullaer/c1851e113bf21ccdfeff Monokai.colorscheme %}
 
 You should put this file into `~/.kde/share/apps/konsole` and then select it in the appearance tab of your profile settings.
+
 ![Konsole Settings](/media/2015-04-01-Monokai-Theme-For-Konsole/konsole_anim.gif)
 
 Together with the [Adobe Source Code Pro](https://github.com/adobe/Source-Code-Pro) font, Konsole will then look like this:
+
 ![Konsole](/media/2015-04-01-Monokai-Theme-For-Konsole/konsole_monokai.png)
