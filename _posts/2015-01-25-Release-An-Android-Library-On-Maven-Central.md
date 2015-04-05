@@ -2,7 +2,7 @@
 layout: post
 title: "Release an Android Library on Maven Central"
 quote: "A lot more hassle than it should be: now explained"
-image: /media/25-01-2015-Release-An-Android-Library-On-Maven-Central/cover.jpg
+image: /media/2015-01-25-Release-An-Android-Library-On-Maven-Central/cover.jpg
 video: false
 comments: true
 categories:

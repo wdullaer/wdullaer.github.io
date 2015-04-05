@@ -2,7 +2,7 @@
 layout: post
 title: "Create a NAS with redundancy using Snapraid"
 quote: "Because sometimes RAID and ZFS are overkill"
-image: /media/06-02-2015-Grim-Fandango-With-Linux-Radeon-Drivers/cover.png
+image: /media/2015-04-05-Hack-WD-Greens/cover.png
 video: false
 comments: true
 categories:
