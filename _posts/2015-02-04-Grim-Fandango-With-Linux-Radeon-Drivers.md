@@ -2,7 +2,7 @@
 layout: post
 title: "Play Grim Fandango on Linux with the Open Source Radeon Drivers"
 quote: "The Nineth Underworld is just a tweak away, jefe"
-image: /media/06-02-2015-Grim-Fandango-With-Linux-Radeon-Drivers/cover.png
+image: /media/2015-02-06-Grim-Fandango-With-Linux-Radeon-Drivers/cover.png
 video: false
 comments: true
 categories:
