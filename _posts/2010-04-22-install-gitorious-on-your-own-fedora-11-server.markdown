@@ -31,7 +31,7 @@ tags:
 > I've copied it over to my current blog to consolidate all my blogging efforts over the years in one place.
 
 <blockquote class="message" markdown="1">
-At the time gitorious was the best open source github alternative available. Now I would recommend [gitlab](http://gitlab.org).
+At the time gitorious was the best open source github alternative available. Now I would recommend <a href="https://gitlab.com">gitlab</a>. In fact, Gitlab bought Gitorious it seems.
 </blockquote>
 
 We wanted to have a code repository that can be browsed from the web. We have chosen to install open source gitorious: [http://www.gitorious.org](http://www.gitorious.org). Unfortunately there are no ready made packages, nor is there an extensive amount of documentation on how to get it running.

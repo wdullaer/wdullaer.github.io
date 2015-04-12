@@ -27,7 +27,7 @@ tags:
 
 Using pgfplots allows you to quickly create very beautiful plots, that look like they belong to your paper, by automatically using the correct fonts and styles. It does this by using the latex compiler to make the figures. This approach is very powerful but has a major drawback: the latex compiler was not made to do this. As a result, latex tends to run out of memory very fast, and projects with a lot of pgfplots tend to take a long time to compile.
 
-We've [previously](http://blog.wdullaer.com/2010/03/16/extending-latex-memory/) shown how to increase the amount of memory latex has available, but this only solves half the problem.
+We've [previously](http://blog.wdullaer.com/blog/2010/03/16/extending-latex-memory/) shown how to increase the amount of memory latex has available, but this only solves half the problem.
 
 A proper way to fix this is using the tikzexternalize command. It causes latex to compile the figures in a separate run, generating pdfs. These pdfs are then included in the main document, reducing both the memory requirements and the compilation time.
 
