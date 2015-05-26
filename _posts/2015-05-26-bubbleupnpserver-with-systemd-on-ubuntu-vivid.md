@@ -2,7 +2,7 @@
 layout: post
 title: "BubbleUpnP Server with Systemd on Ubuntu Vivid"
 quote: "Convert the Service From an Upstart Job to a Systemd Unit"
-image: /media/2015-05-28-bubbleupnpserver-with-systemd-on-ubuntu-vivid/cover.jpg
+image: /media/2015-05-26-bubbleupnpserver-with-systemd-on-ubuntu-vivid/cover.jpg
 video: false
 excerpt: "Starting with Ubuntu 15.04, Canonical replaced their own init system Upstart with the new Linux standard Systemd. Even though this is a big change on a technical level, it was entirely transparent for all packages in the official repositories. BubbleUPnP Server, a closed source third party application, was the only application I had any issues with. I'll show you how you can make it work with systemd."
 comments: true
