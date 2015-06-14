@@ -22,7 +22,12 @@ Because I find it quite pleasing to look at for long periods of time, I decided 
 
 {% gist wdullaer/c1851e113bf21ccdfeff Monokai.colorscheme %}
 
-You should put this file into `~/.kde/share/apps/konsole` and then select it in the appearance tab of your profile settings.
+You should put this file into:
+
+* KDE 4: `~/.kde/share/apps/konsole`
+* KDE 5: `~/.local/share/konsole`
+
+You can then select it in the appearance tab of your profile settings.
 
 ![Konsole Settings](/media/2015-04-01-Monokai-Theme-For-Konsole/konsole_anim.gif)
 
