@@ -10,6 +10,7 @@ redcarpet:
 
 # Github pages extensions
 gems:
+  - jekyll-feed
   - jekyll-sitemap
 
 # Setup
@@ -17,6 +18,7 @@ baseurl:
 
 title:       'Wouter Dullaert'
 tagline:     'Interesting Stuff'
+name:        'Wouter Dullaert'
 description: 'Another scratchpad on the internet'
 url:         http://blog.wdullaer.com
 commentsystem: disqus
@@ -27,6 +29,9 @@ author:
   url:       https://twitter.com/wouterdullaert
 
 paginate:	   5
+
+feed:
+  path: atom.xml
 
 # Custom vars
 icon:        /assets/images/icon.png
