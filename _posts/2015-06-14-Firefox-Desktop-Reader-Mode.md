@@ -12,6 +12,9 @@ tags:
 - Firefox
 - Reader mode
 ---
+
+> Reader mode seems to be enabled by default on all platforms in more recent versions of Firefox
+
 The reader mode in Firefox for android was [released](http://www.cnet.com/how-to/how-to-enable-reader-mode-in-firefox-for-android/) to [much](http://techcrunch.com/2012/10/09/firefox-16-new-developer-toolbar-reader-mode/) [attention](http://www.engadget.com/2012/08/30/firefox-16-beta-arrives-with-web-app-hooks-reader-mode-for-android/) in 2012. After 3 years, a similar functionality is being added in Firefox 38 to the desktop version of the browser. Whether the feature is enabled after you upgrade to seems to be a bit random. Fortunately enabling (or disabling if you really want to) the feature is really easy.
 
 In the `about:config`, change the `reader.parse-on-load.enabled` setting to `true`.
