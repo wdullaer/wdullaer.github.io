@@ -10,14 +10,14 @@ categories:
 - Tutorial
 tags:
 - touchegg
-- logitech touchpad
+- logitech t650 touchpad
 - apple magic trackpad
 - multitouch gestures
 - linux
 - kde
 - kubuntu
 ---
-Support for multitouch gestures on Linux has been steadily increasing in the past years. I recently bought a [Logitech blabla touchpad](http://support.logitech.com/product/touchpad-t650) and all the basics worked right of the box: moving the cursor, two finger click for right click, two finger swipes for scrolling through documents. Unfortunately it wasn't immediately obvious how I could configure anything more (like pinching gestures, or 3 finger gestures).
+Support for multitouch gestures on Linux has been steadily increasing in the past years. I recently bought a [Logitech T650 Touchpad](http://support.logitech.com/product/touchpad-t650) and all the basics worked right of the box: moving the cursor, two finger click for right click, two finger swipes for scrolling through documents. Unfortunately it wasn't immediately obvious how I could configure anything more (like pinching gestures, or 3 finger gestures).
 
 Googling the problem mostly turned up links from the technology stoneage, when these type of devices were new and support was still being added to the various pieces of the Linux stack. Most of this information was no longer relevant by this point in time (just like this post won't be relevant 5 years from now), but somewhere on page 5 in google, I found the solution: Touchegg.
 
@@ -39,39 +39,66 @@ ln -s `which touchegg` ~/.kde/Autostart/touchegg
 ```
 
 ## Configuring Touchegg
-You can configure Touchegg via tweaking the `~/.config/touchegg.conf` xml file. By default it comes with a very extensive setup. I decided to add 2 tweaks, which should give you an idea on how to customize the configuration.
+You can configure Touchegg via tweaking the `~/.config/touchegg/touchegg.conf` xml file. By default it comes with a very extensive setup. I decided to add 2 tweaks, which should give you an idea on how to customize the configuration.
 
 1. Three finger swipe left and right changes virtual desktops (like on a Mac)
 
-```xml
-<application name="All">
-        <gesture type="DRAG" fingers="3" direction="RIGHT">
-                <action type="CHANGE_DESKTOP">PREVIOUS</action>
-        </gesture>
-        <gesture type="DRAG" fingers="3" direction="LEFT">
-                <action type="CHANGE_DESKTOP">NEXT</action>
-        </gesture>
-</application>
-```
+  ```xml
+  <application name="All">
+          <gesture type="DRAG" fingers="3" direction="RIGHT">
+                  <action type="CHANGE_DESKTOP">PREVIOUS</action>
+          </gesture>
+          <gesture type="DRAG" fingers="3" direction="LEFT">
+                  <action type="CHANGE_DESKTOP">NEXT</action>
+          </gesture>
+  </application>
+  ```
 
 2. Two finger swipe left and right in Konsole and Yakuake changes terminal tab
 
-```xml
-<application name="Konsole, Yakuake">
-        <gesture type="DRAG" fingers="2" direction="RIGHT">
-                <action type="SEND_KEYS">Shift+Right</action>
-        </gesture>
-        <gesture type="DRAG" fingers="2" direction="LEFT">
-                <action type="SEND_KEYS">Shift+Left</action>
-        </gesture>
-</application>
-```
+  ```xml
+  <application name="Konsole, Yakuake">
+          <gesture type="DRAG" fingers="2" direction="RIGHT">
+                  <action type="SEND_KEYS">Shift+Right</action>
+          </gesture>
+          <gesture type="DRAG" fingers="2" direction="LEFT">
+                  <action type="SEND_KEYS">Shift+Left</action>
+          </gesture>
+  </application>
+  ```
 
 You can find out application names by launching `touchegg` in a terminal, performing the gesture over the application, and see how it's called in the debug output in the terminal window.
 
-It is worth noting that gestures defined in the synaptics driver take precedence over your Touchegg setup. You can chose to rely on those for 2 finger gestures, or disable them in the touchpad configuration dialog and handle them in Touchegg.
-
 You can find on overview of all available [gestures](https://code.google.com/p/touchegg/wiki/AllGestures) and [actions](https://code.google.com/p/touchegg/wiki/AllActions) on the Touchegg site.
+
+## Disabling 2 finger gestures in the Synaptics driver
+It is worth noting that gestures defined in the Synaptics driver take precedence over your Touchegg setup. You can chose to rely on those for 2 finger gestures, or disable them in your xorg.conf and handle them in Touchegg.
+
+The advantage of the Synaptics driver is that it supports coasting: the effect where your scroll speeds gradually slows down when you do a fling, rather than abruptly coming to a stop.
+
+While Touchegg does not support coasting, its advantage is that you can rebind to any action you like. However you must disable all 2 finger gestures in the setup of the Synaptics driver:
+
+1. Copy the Synaptics configuration to a new file to prevent a package update from overwriting your changes
+
+  ```bash
+  cp /usr/share/X11/xorg.conf.d/50-synaptics /usr/share/X11/xorg.conf.d/40-synaptics
+  ```
+
+2. Add the following lines to `/usr/share/X11/xorg.conf.d/40-synaptics` to disable all 2 finger gestures
+
+  ```ini
+  Option "ClickFinger1" "1"
+  Option "ClickFinger2" "0"
+  Option "ClickFinger3" "0"
+  Option "TapButton1" "1"
+  Option "TapButton2" "0"
+  Option "TapButton3" "0"
+  Option "VertTwoFingerScroll" "0"
+  Option "HorizTwoFingerScroll" "0"
+  Option "GrabEventDevice" "0"
+  ```
+
+> If someone knows how to redefine gestures without losing coasting support, please let me know in the comments. The answer generally seems to be 'wait for Wayland', but there is no decently stable distro with Wayland out there just yet.
 
 ## Touchegg on Ubuntu with Unity
 Unfortunately using Touchegg with the Unity desktop manager is not as straightforward. Unity assigns actions to multitouch gestures itself. If you like this default setup, great, you won't need Touchegg. If you'd like to reassign the actions linked to the gestures, too bad, you can't change them. You will need to change some code in the Unity source and recompile before Touchegg will be able to do it's thing. There is a [really nice blog post](http://ineed.coffee/1068/os-x-like-multitouch-gestures-for-macbook-pro-running-ubuntu-12-10/) explaining the process.
