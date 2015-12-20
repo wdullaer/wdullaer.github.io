@@ -1,0 +1,7 @@
+web:
+  image: jekyll/jekyll:latest
+  ports:
+    - "4000:4000"
+  volumes:
+    - ./:/srv/jekyll
+  command: bundle exec jekyll serve
