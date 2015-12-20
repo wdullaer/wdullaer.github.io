@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Disable Right Click Zone In Linux On A Synaptics Touchpad"
-quote: "Use that beautiful touchpad like it's meant too"
+quote: "Use that beautiful touchpad the way god intended"
 excerpt: "By default the Synaptics driver on Linux will treat the bottom right corner of your touchpad as a right click button, even if you have a macbook like trackpad or Logitech T650 touchpad. I have become used to clicking with 2 fingers for a right click, so the that zone is more annoying than useful. Here's how to disable it."
 image: /media/2015-10-08-Touchegg/cover.jpg
 video: false
@@ -33,17 +33,32 @@ You can run `synclient -l` to see if the settings have been properly applied.
 ## Disable for all sessions
 To disable the right click zone permanently follow these steps:
 
-1. Copy the Synaptics configuration to a new file to prevent a package update from overwriting your changes
+1. Move the Synaptics configuration to a new file to prevent a package update from overwriting your changes
 
     ```bash
-    cp /usr/share/X11/xorg.conf.d/50-synaptics /usr/share/X11/xorg.conf.d/40-synaptics
+    mv /usr/share/X11/xorg.conf.d/50-synaptics /usr/share/X11/xorg.conf.d/40-synaptics
     ```
 
-2. Add the following lines to `/usr/share/X11/xorg.conf.d/40-synaptics` to disable the right click zone
+2. Comment out the `Default clickpad buttons` block in `/usr/share/X11/xorg.conf.d/40-synaptics` to disable the right click zone:
 
     ```bash
-    Option "RightButtonAreaLeft" "0"
-    Option "RightButtonAreaTop" "0"
+    # Section "InputClass"
+    #        Identifier "Default clickpad buttons"
+    #        MatchDriver "synaptics"
+    #        Option "SoftButtonAreas" "50% 0 82% 0 0 0 0 0"
+    #        Option "SecondarySoftButtonAreas" "58% 0 0 15% 42% 58% 0 15%"
+    # EndSection
+    ```
+
+    Alternatively, if you don't have the default ubuntu config, you can add the following block to the file:
+
+    ```bash
+    Section "InputClass"
+        Identifier "Default clickpad buttons"
+        MatchDriver "synaptics"
+        Option "RightButtonAreaLeft" "0"
+        Option "RightButtonAreaTop" "0"
+    EndSection
     ```
 
 ## Further Reading
