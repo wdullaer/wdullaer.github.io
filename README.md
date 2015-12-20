@@ -4,14 +4,14 @@ This is the repository that is powering my personal scratchpad / blog.
 
 The theme is based on [Thinny](http://github.com/camporez/Thinny.git), but I might switch to [Mediator](https://github.com/dirkfabisch/mediator) in the future.
 
-If you want to run the blog locally (because it is that awesome), you can run:
+If you want to run the blog locally (because it is that awesome), you can run any of the following:
 
-1. If you have `ruby` and `bundler` properly installed on your machine
+1. Using `ruby` and `bundler`
 
   ```bash
   bundle exec jekyll serve
   ```
-2. If you can't be bother with the ruby mess, but have [docker](https://docker.com) and [docker-compose](https://github.com/docker/compose)
+2. Using [docker](https://docker.com) and [docker-compose](https://github.com/docker/compose)
 
   ```bash
   docker-compose up
