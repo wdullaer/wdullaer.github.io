@@ -24,8 +24,15 @@ tags:
 
 ## AUFS Configuration
 
+Configure aufs using /etc/fstab values
+
 ## Snapraid Configuration
 
+Configure folders and disks in /etc/snapraid.conf
+
+disk <path>
+parity <path>
+exclude <path>
 
     mount
     /dev/sdc1 on / type ext4 (rw,noatime,errors=remount-ro)
