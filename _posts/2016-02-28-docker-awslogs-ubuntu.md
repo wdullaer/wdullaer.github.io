@@ -43,7 +43,7 @@ The first thing we need to do is create a user and accompanying access keys for 
   "statement": [
     {
       "Action": [
-        "logs:createLogStream",
+        "logs:CreateLogStream",
         "logs:PutLogEvents"
       ],
       "Effect": "Allow",
