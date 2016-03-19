@@ -39,11 +39,11 @@ The first thing we need to do is create a user and accompanying access keys for 
 
 ```json
 {
-  "version": "2012-10-17",
-  "statement": [
+  "Version": "2012-10-17",
+  "Statement": [
     {
       "Action": [
-        "logs:createLogStream",
+        "logs:CreateLogStream",
         "logs:PutLogEvents"
       ],
       "Effect": "Allow",
