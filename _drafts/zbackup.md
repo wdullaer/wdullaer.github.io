@@ -19,10 +19,11 @@ tags:
 - Google cloud platform
 ---
 > This post is part of a short series on NAS technology:
-
+>
 > - [Make your WD Greens NAS ready]({% post_url 2015-04-05-Hack-WD-Greens %})
 - [A comparison of different RAID and Union file systems]({% post_url 2015-04-28-Comparison-Of-Raid-Like-Systems %})
-- How I configured of Snapraid and AUFS
+- [How I configured of Snapraid and AUFS](some_url)
+- Incremental backups to object storage using zbackup
 
 Install zbackup from the repositories
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "BubbleUpnP Server with Systemd on Ubuntu Vivid"
+title: "BubbleUPnP Server with Systemd on Ubuntu Vivid"
 quote: "Convert the Service From an Upstart Job to a Systemd Unit"
 image: /media/2015-05-26-bubbleupnpserver-with-systemd-on-ubuntu-vivid/cover.jpg
 video: false
@@ -94,7 +94,7 @@ ExecStart=/bin/su - ${USER} -c "/usr/share/bubbleupnpserver/launch.sh ${OPTS}"
 
 I haven't tested that though.
 
-## Further Reader
+## Further Reading
 
 * [Ubuntu wiki - Systemd for Upstart users](https://wiki.ubuntu.com/SystemdForUpstartUsers)
 * [Archlinux wiki - Systemd Overview](https://wiki.archlinux.org/index.php/Systemd)

@@ -36,7 +36,7 @@ To disable the right click zone permanently follow these steps:
 1. Move the Synaptics configuration to a new file to prevent a package update from overwriting your changes
 
     ```bash
-    mv /usr/share/X11/xorg.conf.d/50-synaptics /usr/share/X11/xorg.conf.d/40-synaptics
+    mv /usr/share/X11/xorg.conf.d/50-synaptics    /usr/share/X11/xorg.conf.d/40-synaptics
     ```
 
 2. Comment out the `Default clickpad buttons` block in `/usr/share/X11/xorg.conf.d/40-synaptics` to disable the right click zone:

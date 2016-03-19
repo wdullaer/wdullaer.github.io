@@ -17,10 +17,11 @@ tags:
 - JBOD
 ---
 > This post is part of a short series on NAS technology:
-
+>
 > - [Make your WD Greens NAS ready]({% post_url 2015-04-05-Hack-WD-Greens %})
 - A comparison of different RAID and Union file systems
-- How I configured of Snapraid and AUFS
+- [How I configured Snapraid and AUFS]({% post_url 2016-03-19-snapraid-and-aufs-configuration %})
+- Incremental backups to object storage using rclone and zbackup
 
 Like a lot of IT people I have a small server at home which serves as the centralised storage for my music, movies, pictures and other files. While buying an appliance, like a qnap or synology, is a perfectly viable option, I would have felt like a carpenter buying his furniture at Ikea. So I've built my own solution using a HP Proliant Microserver (because it was great value for money at the time), 16 gigs of RAM (because this too was cheap back then) and 3 WD Green harddrives (you can guess the theme here). While not massively fast, it is a system fit for purpose: low power, expendable, with lot's of storage. This post will go into a bit more detail on the software I used to configure the NAS.
 

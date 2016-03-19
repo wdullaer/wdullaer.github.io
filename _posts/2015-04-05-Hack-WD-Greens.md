@@ -16,10 +16,11 @@ tags:
 - Linux
 ---
 > This post is part of a short series on NAS technology:
-
+>
 > - Make your WD Greens NAS ready
 - [A comparison of different RAID and Union file systems]({% post_url 2015-04-28-Comparison-Of-Raid-Like-Systems %})
-- How I configured Snapraid and AUFS
+- [How I configured Snapraid and AUFS]({% post_url 2016-03-19-snapraid-and-aufs-configuration %})
+- Incremental backups to object storage using rclone and zbackup
 
 I recently needed more storage space in my home NAS and decided to add a few disk. Because my NAS is mostly used as a media server, I don't need any high RPM drives: 5400 RPM drives will suffice. After some googling I settled on buying Western Digital drives. They have good and bad reviews like any other brand, but they never seem to score below average in any of them.
 

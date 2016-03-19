@@ -1,3 +1,24 @@
+---
+layout: post
+title: "Pass credentials to the awslogs Docker logging driver on Ubuntu"
+quote: "Let's ship some logs"
+image: /media/2016-02-28-docker-logs/cover.jpg
+video: false
+excerpt: "Last year docker added support for multiple logging drivers. This makes it very easy to integrate your docker containers with a centralized log management system in a transparent way. If you want to use the AWS Cloudwatch driver you will need to supply the docker daemon with access keys, which proved to be trickier than expected. Here's how I managed to get it running."
+comments: true
+categories:
+- Linux
+- Tutorial
+- AWS
+tags:
+- Linux
+- Ubuntu
+- Docker
+- AWS
+- Cloudwatch
+- Logs
+---
+
 I recently acquired a brand new broadwell HP Spectre x360. This is one of those new Lenovo Yoga inspired convertible laptops. The hardware is really nice: great aluminium build, sharp display, good keyboard, awesome extra wide touchpad. By default it comes with Windows, which I just can't get used to anymore, so I did what I always do: format the harddisk and install Linux. Because the laptop hardware is close to the bleeding edge, this requires a little bit more fiddling than it would on another laptop. (Not even Microsoft has properly nailed the software for convertible laptops). In this blog post I'm keeping track of the tweaks I needed to do, to get the laptop working just the way I want.
 
 ## Get Linux to install
