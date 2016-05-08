@@ -11,6 +11,8 @@ redcarpet:
 # Github pages extensions
 gems:
   - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
   - jekyll-sitemap
 
 # Setup
