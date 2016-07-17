@@ -1,5 +1,7 @@
 # Wdullaer.com blog
 
+> Deprecated: I'm no longer using Github Pages for my blog. The new content can be found at https://gitlab.com/wdullaer/wdullaer.com/
+
 This is the repository that is powering my personal scratchpad / blog.
 
 The theme is based on [Thinny](http://github.com/camporez/Thinny.git), but I might switch to [Mediator](https://github.com/dirkfabisch/mediator) in the future.

@@ -1,12 +1,12 @@
 # Dependencies
-markdown:    redcarpet
+# markdown:    redcarpet
 
 # Permalinks
 permalink:   /blog/:year/:month/:day/:title
 
 # Markdown processor
-redcarpet:
-  extensions: [with_toc_data]
+# redcarpet:
+#   extensions: [with_toc_data]
 
 # Github pages extensions
 gems:
